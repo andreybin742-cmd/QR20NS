@@ -2,40 +2,82 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Поздравление от НОВОСИБИРСКОЙ ДИРЕКЦИИ СВЯЗИ</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 0;
+            margin: 0;
         }
         .container {
+            width: 100%;
+            min-height: 100vh;
             background: white;
-            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             padding: 20px;
-            text-align: center;
-            max-width: 500px;
         }
         .greeting {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 20px;
-            border-radius: 15px;
+            padding: 25px;
+            border-radius: 20px;
             margin-bottom: 20px;
+            text-align: center;
+            width: 100%;
         }
-        .greeting h1 { font-size: 24px; margin-bottom: 10px; }
-        .greeting p { font-size: 18px; }
+        .greeting h1 {
+            font-size: clamp(20px, 6vw, 28px);
+            margin-bottom: 10px;
+        }
+        .greeting p {
+            font-size: clamp(18px, 5vw, 24px);
+        }
+        .image-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+        }
         .image-container img {
+            width: 100%;
             max-width: 100%;
-            border-radius: 10px;
-            margin: 20px 0;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            display: block;
         }
-        .footer { color: #666; font-size: 14px; }
+        .footer {
+            margin-top: 20px;
+            color: #666;
+            font-size: clamp(12px, 4vw, 14px);
+            text-align: center;
+            width: 100%;
+        }
+        
+        /* Для очень маленьких экранов */
+        @media (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
+            .greeting {
+                padding: 15px;
+            }
+        }
     </style>
 </head>
 <body>
